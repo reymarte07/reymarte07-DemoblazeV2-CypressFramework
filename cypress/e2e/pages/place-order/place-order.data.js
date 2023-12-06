@@ -4,7 +4,7 @@ export class PlaceOrderData {
       name: "Test name",
       country: "United States",
       city: "Boston",
-      creditCardNumber: "4032032683786229",
+      creditCardNumber: "5105105105105100",
       month: 12,
       year: 2024,
     };
