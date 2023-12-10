@@ -8,11 +8,14 @@ const user = CommonPageMethods.generateRandomString(); //generate random user
 const password = CommonPageMethods.generateRandomString(7); //generate random password
 const existingUser = LoginData.validCredentials.username;
 
+beforeEach(() =>{
+  CommonPageMethods.navigateToDemoBlaze();
+})
+
 describe(CommonPageData.testSuites.registro, () => {
   it("Registro de usuario valido", () => {
     Logger.stepNumber(1);
     Logger.step("Navegar a la página de inicio");
-    CommonPageMethods.navigateToDemoBlaze();
 
     Logger.stepNumber(2);
     Logger.step('Hacer clic en "Sign up" en la barra de navegación');
@@ -37,8 +40,7 @@ describe(CommonPageData.testSuites.registro, () => {
   it("Registro de usuario inválido", () => {
     Logger.stepNumber(1);
     Logger.step("Navegar a la página de inicio");
-    CommonPageMethods.navigateToDemoBlaze();
-
+  
     Logger.stepNumber(2);
     Logger.step('Hacer clic en "Sign up" en la barra de navegación');
     CommonPageMethods.clickOnSingupOption();
