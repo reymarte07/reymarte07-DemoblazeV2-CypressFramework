@@ -15,6 +15,6 @@ export class HomeElements {
 
   //-------------------selector Dinamico seleccionar cualquier producto de la lista------------------------
   static product (productName){
-    return cy.contains('a', productName);
+    return cy.contains("a", productName, {timeout:30000});
   }
 }
