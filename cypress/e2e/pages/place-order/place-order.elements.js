@@ -2,23 +2,29 @@ export class PlaceOrderElements {
   //---------------------------------------TextBoxes-----------------------------
   static get textboxes() {
     return {
+      //-----NAME SELECTOR----------
       get name() {
-        cy.get("input#name");
+        return cy.get("input#name");
       },
+      //------COUNTRY SELECTOR------
       get country() {
-        cy.get("input#country");
+        return cy.get("input#country");
       },
+      //---------CITY SELECTOR----------
       get city() {
-        cy.get("input#city");
+        return cy.get("input#city");
       },
+      //--------CREDIT CARD SELECTOR---------
       get creditCard() {
-        cy.get("input#card");
+        return cy.get("input#card");
       },
-      get moth() {
-        cy.get("input#month");
+      //---------MONTH SELECTOR------------
+      get month() {
+        return cy.get("input#month");
       },
+      //---------YEAR SELECTOR---------
       get year() {
-        cy.get("input#year");
+        return cy.get("input#year");
       },
     };
   }
@@ -30,7 +36,7 @@ export class PlaceOrderElements {
         cy.get('div[id="orderModal"] button').eq(1);
       },
       get purchase() {
-        cy.contains("button", "Purchase");
+        cy.contains('button', 'Purchase')
       },
     };
   }
